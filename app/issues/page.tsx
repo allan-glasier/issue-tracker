@@ -11,6 +11,7 @@ import {
 } from "@radix-ui/themes";
 import Link from "next/link";
 import React from "react";
+import IssueStatusBasge from "../components/IssueStatusBasge";
 
 const IssuesPage = async () => {
   const issues = await prisma.issue.findMany();
@@ -42,7 +43,7 @@ const IssuesPage = async () => {
                 <div className="block md:hidden">{issue.status}</div>
               </TableRowHeaderCell>
               <TableCell className="hidden md:table-cell">
-                {issue.status}
+                <IssueStatusBasge status={issue.status} />
               </TableCell>
               <TableCell className="hidden md:table-cell">
                 {issue.createdAt.toDateString()}
