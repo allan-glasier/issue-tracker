@@ -38,7 +38,7 @@ const IssuesPage = async () => {
           {issues.map((issue) => (
             <TableRow key={issue.id}>
               <TableRowHeaderCell>
-                {issue.title}
+                <Link href={`/issues/${issue.id}`}>{issue.title}</Link>
                 <div className="block md:hidden">{issue.status}</div>
               </TableRowHeaderCell>
               <TableCell className="hidden md:table-cell">
