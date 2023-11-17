@@ -1,15 +1,13 @@
+import { Skeleton } from "@/app/components";
 import {
-  TableRoot,
-  TableHeader,
-  TableRow,
-  TableColumnHeaderCell,
   TableBody,
-  TableRowHeaderCell,
   TableCell,
+  TableColumnHeaderCell,
+  TableHeader,
+  TableRoot,
+  TableRow,
+  TableRowHeaderCell,
 } from "@radix-ui/themes";
-import React from "react";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 import IssuesActions from "./IssuesActions";
 
 const LoadingIssuesPage = () => {
